@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+     {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+</head>
+<body>
+<header class="base-header">
+    <div class="logo">
+        <a href="/index.html">
+            <h1>LOGO</h1>
+        </a>
+    </div>
+    <nav class="base-header-nav">
+        <a href="/books_catalog.html">Книги</a>
+        <a href="/support.html">Поддержка</a>
+        <a href="/publishing-houses.html">Издания</a>
+    </nav>
+    <div class="find-area-box">
+        <input type="text" class="find-area-input" placeholder="Поиск книг по каталогу">
+        <input type="submit"
+               value=""
+               class="find_sumbit"
+               style="background-image: url({% static 'images/search.svg' %})">
+    </div>
+</header>
+
+ {% block content %}{% endblock %}
+
+<footer class="base-footer">
+    <ul class="footer-menu">
+        <li class="copy-footer-menu-item">
+            <a href="/">Поддержка</a>
+        </li>
+        <li class="copy-footer-menu-item">
+            <a href="/">Поддержка</a>
+        </li>
+        <li class="copy-footer-menu-item">
+            <a href="/">Поддержка</a>
+        </li>
+        <li class="copy-footer-menu-item">
+            <a href="/">Поддержка</a>
+        </li>
+        <li class="copy-footer-menu-item">
+            <a href="/">Поддержка</a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

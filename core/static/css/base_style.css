@@ -1,0 +1,77 @@
+/* HEADER */
+.base-header{
+    display: flex;
+    width: 60vw;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.base-header .logo h1{
+    font-size: 36px;
+    color: black;
+}
+
+.base-header .logo a{
+    text-decoration: none;
+}
+
+.base-header .base-header-nav{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.base-header .base-header-nav a{
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s ease;
+}
+
+.base-header .base-header-nav a:hover{
+    color: rgb(0, 0, 204);
+}
+
+.find-area-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 15vw;
+}
+
+.find-area-box .find-area-input{
+    padding: 6px;
+    width: 100%;
+}
+
+.find-area-box .find-area-input::placeholder{
+    font-size: 16px;
+}
+
+.find-area-box .find_sumbit{
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.base-footer{
+    width: 60vw;
+    margin: 20px auto;
+}
+
+.base-footer .footer-menu{
+    display: flex;
+    font-size: 16px;
+    justify-content: space-around;
+}
+
+.base-footer .footer-menu .copy-footer-menu-item a{
+    color: rgba(0, 0, 0, 0.918);
+    text-decoration: none;
+}
