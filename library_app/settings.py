@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+from django.conf.global_settings import LOGIN_URL
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core.apps.CoreConfig'
+    'core.apps.CoreConfig',
+    'django.contrib.postgres',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+LOGIN_URL = 'users:login'
+
+LANGUAGE_CODE = 'ru-ru'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
+DATE_INPUT_FORMATS = [
+    '%d-%m-%Y', # 06-02-2026
+    '%d.%m.%Y', # 06.02.2026
+    '%Y-%m-%d', # 2026-02-06
+]
