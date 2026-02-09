@@ -78,13 +78,21 @@ WSGI_APPLICATION = 'library_app.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'db_library_django',
+    #     'HOST': 'localhost',
+    #     'PASSWORD': '123123',
+    #     'USER': 'postgres',
+    #     'PORT': '5433',
+    # }
+'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_library_django',
-        'HOST': 'localhost',
-        'PASSWORD': '123123',
+        'NAME': 'django_library_db',
         'USER': 'postgres',
-        'PORT': '5433',
+        'PASSWORD': '123123',
+        'HOST': 'psgr',        # ВАЖНО: имя сервиса из compose.yml, а не localhost!
+        'PORT': '5432',        # Внутри сети Docker всегда 5432
     }
 }
 

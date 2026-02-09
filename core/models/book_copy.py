@@ -19,5 +19,9 @@ class BookCopy(models.Model):
         db_column='condition_id'
     )
 
+    def __str__(self):
+        return f'Книга: {self.book.title}, экземпляр: {self.copy_number}'
+
     class Meta():
         db_table = 'bookcopy'
+

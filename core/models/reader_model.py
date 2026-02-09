@@ -12,3 +12,6 @@ class Reader(models.Model):
 
     class Meta():
         db_table = 'reader'
+
+    def __str__(self):
+        return self.first_name

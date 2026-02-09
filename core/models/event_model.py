@@ -8,3 +8,6 @@ class Event(models.Model):
 
     class Meta():
         db_table = 'event'
+
+    def __str__(self):
+        return self.title

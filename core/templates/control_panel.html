@@ -6,8 +6,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="">
-
+<div class="control_panel">
+    <a href="{% url 'book_add' %}">Создание книги</a>
+    <a href="{% url 'loan_add' %}">Выдача книги</a>
+    <a href="{% url 'loan_list' %}">Просмотр всех выдач</a>
 </div>
-<a href="{% url 'book_add' %}">Создание книги</a>
 {% endblock %}
